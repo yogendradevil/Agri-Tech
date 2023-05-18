@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seller-Agri Tech</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+     <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <div class="navMain">
+      <a href="/home" id="projectName"><span>A</span>gri <span>T</span>ech</a>
+      <nav>
+          <a href="/market" class="active">Home</a>
+          <a href="/blog">Farm Forecast</a>
+          
+          <!-- <a href="/contact">Contact Us</a> -->
+          <a href="/sell" id="handleWantToSell">Want to sell?</a>
+      </nav>
+  </div>
+  <div id="alrt">
+    {{#if alert}}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Crop is added successfully</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+  </div>
+  <div id="unsave">
+    {{#if unsaved}}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Crop is added successfully</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+  </div>
+  <div id="box">
+    {{#if xyz}}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Crop is added successfully</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+  </div>
+  <div class="m-5">
+    <form action="/sell" method="post" enctype="multipart/form-data" class="p-5 m-5 border">
+      <div class="row">
+        <div class=" col col-md-6">
+          <label for="firstName">First Name</label>
+          <input name="FName" type="text" class="form-control" id="firstName" placeholder="Enter Your First Name">
+        </div>
+        <div class="col col-md-6">
+          <label for="lastName">Last Name</label>
+          <input name="LName" type="text" class="form-control" id="lastName" placeholder="Enter your Last Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail4">Email</label>
+        <input name="EmailAdd" type="email" class="form-control" id="inputEmail4" placeholder="xyz@gmail.com">
+      </div>
+      <div class="form-group">
+        <label for="inputNumber">Phone Number</label>
+        <input name="PhoneNo" type="tel" class="form-control" id="inputNumber" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Address 2</label>
+        <input name="Address" type="text" class="form-control" id="inputAddress2"
+          placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="inputCrop">Crop 1</label>
+          <input name="CropName" type="text" class="form-control" id="inpuCrop">
+        </div>
+        <div class="col-md-4">
+          <label for="inputQuantity">Quantity</label>
+          <input name="CropQ" type="text" class="form-control" id="inputQuantity">
+        </div>
+        <div class="col-md-2">
+          <label for="inputPrice">Price</label>
+          <input name="CropP" type="text" class="form-control" id="inputPrice">
+        </div>
+      </div>
+      <div class="form-group my-2">
+        <label class="d-block my-2" for="myFile">Upload the picture of the crop</label>
+        <input name="file" type="file" id="myFile" href="">
+      </div>
+      <button type="submit" class=" my-3 btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

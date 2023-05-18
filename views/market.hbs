@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="scrollbar" id="style-7">
+  <link rel="stylesheet" href="/static/style2.css" />
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market</title>
+  </head>
+  <style>
+    img {
+      height: 100%;
+    }
+    .sright {
+      gap: 2rem;
+      justify-content: flex-start;
+      padding-top: 10rem;
+    }
+  </style>
+
+  <body>
+    <div class="navMain">
+      <a href="/home" id="projectName"><span>A</span>gri <span>T</span>ech</a>
+      <nav>
+          <a href="/market" class="active">Home</a>
+          <a href="/blog">Farm Forecast</a>
+          <!-- <a href="/contact">Contact Us</a> -->
+          <a href="/sell" id="handleWantToSell">Want to sell?</a>
+      </nav>
+  </div>
+    <hr />
+    <!-- carasole -->
+    <section class="hero-section">
+        <div class="left" style="align-items: center;">
+            <div class="heading">
+                <h1>Wellcome to<br> <span>Agri Market</span> </h1>
+            </div>
+            <!-- <div class="content">
+                <p>
+                    Our website is dedicated to helping farmers sell their goods while avoiding the high commission rates charged by third-party intermediaries. We offer a user-friendly platform that connects farmers directly with consumers, allowing for fair prices and more profits for the farmers. Additionally, our advanced crop planning services provide farmers with insights on which crops will be most successful in a particular season. By utilizing cutting-edge algorithms, our platform helps farmers make informed decisions about what to grow and when to grow it.    
+                </p>
+            </div> -->
+        </div>
+
+        <div class="right">
+            <section class="big-container">
+                <section class="container">
+                    <div class="obj1">
+                        <img src="/static/c5.jpg" alt="">
+                        <!-- <h2>Direct farmer-to-consumer sales</h2> -->
+                    </div>
+                    <div class="obj2">
+                        <img src="/static/c9.jpg" alt="">
+                        <!-- <h2>Smart crop selection assistance</h2> -->
+                    </div>
+                    <div class="obj3">
+                        <img src="/static/c6.png" alt="">
+                        <!-- <h2>Collaborative community for farmers</h2> -->
+                    </div>
+                    <div class="obj4">
+                        <img src="/static/c4.jpg" alt="">
+                        <!-- <h2>Comprehensive farming resource hub</h2> -->
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+<!-- card -->
+<h1 class="head" style="text-align: center; font-size: 4rem; font-family: 'Quantico', sans-serif;">Shop Here</h1>
+
+<section class="handleCardRender">
+    <div class="handleCardLeft">
+        {{#each result}}
+        <div class="card">
+            <div class="cardData">
+                <h2 style="color: blue; font-size: 1.8rem;">Owner: {{this.FName}} {{this.LName}}</h2>
+                <h1 style="color: black; font-size: 2rem;">{{this.CropName}}</h1>
+                <h2 style="color: green; font-size: 1.5rem;">&#8377; {{this.CropP}}/kg</h2>
+                <h2 style="color: green; font-size: 1.5rem;">Stock: {{this.CropQ}}</h2>
+                <h2 style="color: red; font-size: 1.5rem;">Mail: {{this.EmailAdd}}</h2>
+                <h2 style="color: red; font-size: 1.5rem;">Phone No.: {{this.PhoneNo}}</h2>
+                <h2 style="color: black; font-size: 1.5rem;">Address: {{this.Address}}</h2>
+                <a href="{{this.CropP}}" style="color: black; font-size: 1.2rem; text-align: right;">website</a>
+            </div>
+        </div> 
+        {{/each}}
+    </div>
+    <div class="handleCardRight">
+        {{#each file_loc}}
+        <div class="handleImg">
+            <img src="{{this.path}}" alt="">
+            <!-- <img src="{{this.file}}" alt=""> -->
+        </div>
+        {{/each}}
+    </div>
+</section>
+  </body>
+</html>

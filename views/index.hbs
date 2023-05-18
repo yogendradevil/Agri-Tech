@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            font-size: 62.5%;
+        } 
+        :root{
+            --blue: #42855B;
+            --black: #000000;
+            --yellow: #f09709;
+            --grey: #e5e5e5;
+            --white: #ffffff;
+            --darkGray: #adb5bd;
+            --lightBlue: #483838;
+            --lightYellow: #ffc300; 
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            padding-top: 2rem;
+        }
+        body {
+            background-color: var(--blue);
+            color: var(--white);
+            font-family: 'Raleway', sans-serif;
+        }
+        .hero-section{
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .left, .right{
+            width: 50%;
+            padding: 4rem;
+        }
+        .heading h1{
+            font-size: 8rem;
+        }
+        .heading h1 span{
+            color: var(--yellow);
+        }
+        .content p{
+            padding-top: 3rem;
+            font-size: 1.6rem;
+            line-height: 1.6;
+            text-align: justify;
+            color: var(--darkGray);
+        }
+        .right{
+            height: 100%;
+        }
+        .button-group{
+            padding: 4rem 0;
+            display: flex;
+            gap: 2rem;
+        }
+        .button-group button{
+            padding: 1rem 6rem;
+        }
+        .shop{
+            background-color: var(--lightBlue);
+            color: var(--white);
+            text-transform: uppercase;
+            font-weight: 600;
+            border: 0;
+            transition: .2s ease;
+        }
+        .shop:hover{
+            background-color: var(--yellow);
+            color: var(--black);
+            cursor: pointer;
+        }
+        .pridict{
+            color: var(--lightBlue);
+            text-transform: uppercase;
+            font-weight: 600;
+            border: 0;
+            transition: .2s ease;
+        }
+        .pridict:hover{
+            background-color: var(--yellow);
+            color: var(--black);
+            cursor: pointer;
+        }
+        .big-container{
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            display: flex;
+            width: 400%;
+            animation-name: fetures;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            animation-duration: 20s;
+            /*animation-timing-function: steps(1, end);*/
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        @keyframes fetures {
+            0%{
+                transform: translateX(0rem);
+            }
+            25%{
+                transform: translateX(-59rem);
+            }
+            50%{
+                transform: translateX(-119rem);
+            }
+            75%{
+                transform: translateX(-178rem);
+            }
+            100%{
+                transform: translateX(0rem);                
+            }
+        }
+        img{
+            width: 75%;
+            object-fit:scale-down; 
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            height: 4rem;
+            padding: 2rem;
+        }
+    </style>    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Tech</title>
+</head>
+<body>
+    <!-- Heading  -->
+    <nav>
+        <h2>Agri Tech</h2> 
+    </nav>
+
+    <!-- Carasole and discription of the project -->
+    <main>
+        <section class="hero-section">
+            <div class="left">
+                <div class="heading">
+                    <h1>A Farmer's <br> <span>Friend</span> </h1>
+                </div>
+                <div class="content">
+                    <p>
+                        Our website is dedicated to helping farmers sell their goods while avoiding the high commission rates charged by third-party intermediaries. We offer a user-friendly platform that connects farmers directly with consumers, allowing for fair prices and more profits for the farmers. Additionally, our advanced crop planning services provide farmers with insights on which crops will be most successful in a particular season. By utilizing cutting-edge algorithms, our platform helps farmers make informed decisions about what to grow and when to grow it.    
+                    </p>
+                </div>
+                <div class="button-group">
+                   <a href="/market">  <button class="shop">Agri Market </button></a>  
+                    <button class="pridict">Farm Forecast</button>
+                </div>
+            </div>
+
+            <div class="right">
+                <section class="big-container">
+                    <section class="container">
+                        <div class="obj1">
+                            <img src="/static/pic1.png" alt="">
+                            <h2>Direct farmer-to-consumer sales</h2>
+                        </div>
+                        <div class="obj2">
+                            <img src="/static/pic4.png" alt="">
+                            <h2>Smart crop selection assistance</h2>
+                        </div>
+                        <div class="obj3">
+                            <img src="/static/pic5.png" alt="">
+                            <h2>Collaborative community for farmers</h2>
+                        </div>
+                        <div class="obj4">
+                            <img src="/static/pic3.png" alt="">
+                            <h2>Comprehensive farming resource hub</h2>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+    </main>
+    
+    <!-- footer of the page -->
+    <footer>
+        
+    </footer>
+</body>
+</html>
